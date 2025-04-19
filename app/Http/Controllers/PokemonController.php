@@ -12,7 +12,11 @@ class PokemonController extends Controller
     }
 
     public function rank() {
-        $pokemons = Pokemon::orderBy('wins', 'desc')->paginate(10);
+        $pokemons = Pokemon::
+        orderByRaw('CASE WHEN wins + losses > 0 THEN wins / NULLIF(wins + losses, 0) * 100 ELSE 0 END DESC')
+        ->orderBy('wins', 'desc')
+        ->orderBy('losses')
+        ->paginate(20);
         return view('rank', ['pokemons' => $pokemons]);
     }
 

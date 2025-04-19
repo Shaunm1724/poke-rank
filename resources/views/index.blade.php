@@ -6,7 +6,7 @@
             @foreach ($pokemons as $pokemon)
                 <div class="bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 border border-gray-700 transform hover:scale-105 transition-transform w-full sm:w-auto">
                     <div class="flex flex-col items-center">
-                        <h2 class="text-xl font-semibold capitalize mb-4 text-red-300">{{ $pokemon->name }}</h2>
+                        <h2 class="text-xl font-semibold capitalize mb-4 text-red-300"><a href="https://www.pokemon.com/us/pokedex/{{ strtolower($pokemon->name) }}" target="_blank">{{ $pokemon->name }}</a></h2>
                         <div class="bg-gray-700 rounded-lg p-2 mb-4">
                             <img
                                 src="{{ $pokemon->sprite }}"
