@@ -20,7 +20,9 @@
                    </div>
                    
                    <div class="flex-grow text-center sm:text-left">
-                       <h2 class="text-xl font-semibold capitalize text-red-300"><a href="https://www.pokemon.com/us/pokedex/{{ strtolower($pokemon->name) }}" target="_blank">{{ $pokemon->name }}</a></h2>
+                       <h2 class="text-xl font-semibold capitalize text-red-300">
+                            <a href="https://www.pokemon.com/us/pokedex/{{ strtolower($pokemon->name) }}" target="_blank">{{ $pokemon->name }}</a>
+                        </h2>
                    </div>
                    
                    <div class="flex flex-col sm:flex-row gap-2 items-center">
