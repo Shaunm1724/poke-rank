@@ -20,8 +20,8 @@ class PokemonController extends Controller
     }
 
     public function battle($idwinner, $idloser) {
-        $winner = Pokemon::findOrFail($idwinner)->increment('wins');
-        $loser = Pokemon::findOrFail($idloser)->increment('losses');
+        Pokemon::findOrFail($idwinner)->increment('wins');
+        Pokemon::findOrFail($idloser)->increment('losses');
         return redirect()->route('pokemon.index');
     }
 }
