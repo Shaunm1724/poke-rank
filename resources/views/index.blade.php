@@ -19,8 +19,8 @@
                             >
                         </div>
                         <form action="{{ route('pokemon.battle', [
-                            $pokemon->id,
-                            $pokemons->where('id', '!=', $pokemon->id)->first()->id
+                            'idwinner' => $pokemon->id,
+                            'idloser' => $pokemons->where('id', '!=', $pokemon->id)->first()->id
                         ]) }}" method="POST" class="w-full">
                             @csrf
                             <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition-colors w-full">
