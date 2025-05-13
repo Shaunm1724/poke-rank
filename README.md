@@ -1,6 +1,6 @@
 # App that ranks Pokemon Based on Votes in Random battles
 
-This web app allows users to vote for Pokémon in the context of **random battles**, then ranks them based on community feedback.
+This web app allows users to vote for Pokémon in the context of **random battles**, then ranks them based on win percentage.
 
 ---
 
